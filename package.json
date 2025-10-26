@@ -12,7 +12,8 @@
     "web": "node src/web/server.js",
     "test": "node --test src/**/*.test.js",
     "migrate": "node src/db/migrate.js",
-    "migrate:rollback": "node src/db/migrate.js rollback"
+    "migrate:rollback": "node src/db/migrate.js rollback",
+    "setup:testworld": "node scripts/create-test-world.js"
   },
   "keywords": [
     "storytelling",
