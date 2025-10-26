@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="StorySplicer - Interactive world simulation">
+  <meta name="theme-color" content="#2563eb">
+  <title>StorySplicer</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/images/icon-192.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <!-- Login Screen -->
+  <div id="login-screen" class="screen">
+    <div class="login-container">
+      <h1>StorySplicer</h1>
+      <p class="subtitle">Enter the world</p>
+
+      <form id="login-form">
+        <div class="form-group">
+          <label for="username">Character Name</label>
+          <input type="text" id="username" name="username" required autofocus>
+        </div>
+
+        <div class="form-group">
+          <label for="world-id">World ID</label>
+          <input type="number" id="world-id" name="world-id" value="44" required>
+        </div>
+
+        <button type="submit" class="btn-primary">Enter World</button>
+      </form>
+
+      <div id="login-status" class="status-message"></div>
+    </div>
+  </div>
+
+  <!-- Game Screen -->
+  <div id="game-screen" class="screen hidden">
+    <!-- Header -->
+    <header class="game-header">
+      <h1 id="area-name">Loading...</h1>
+      <button id="logout-btn" class="btn-icon" title="Logout">
+        <span>⏻</span>
+      </button>
+    </header>
+
+    <!-- Main Game Area -->
+    <main class="game-main">
+      <!-- Area Image/Visualization -->
+      <section class="area-image">
+        <div id="area-visual" class="visual-placeholder">
+          <span>🌍</span>
+        </div>
+      </section>
+
+      <!-- Area Description -->
+      <section class="area-description">
+        <p id="area-desc">Connecting to world...</p>
+        <div id="area-temperature" class="area-meta"></div>
+      </section>
+
+      <!-- Entities in Area -->
+      <section class="area-entities">
+        <div class="entities-section">
+          <h3>Characters Here</h3>
+          <div id="characters-list" class="entity-list">
+            <p class="empty-state">No other characters</p>
+          </div>
+        </div>
+
+        <div class="entities-section">
+          <h3>Items Here</h3>
+          <div id="items-list" class="entity-list">
+            <p class="empty-state">No items</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Character Status -->
+      <section class="character-status">
+        <h3>Your Status</h3>
+        <div id="status-bars" class="status-container">
+          <div class="status-bar">
+            <label>Nutrition</label>
+            <div class="bar"><div class="bar-fill" id="nutrition-bar"></div></div>
+            <span id="nutrition-value">--</span>
+          </div>
+          <div class="status-bar">
+            <label>Hydration</label>
+            <div class="bar"><div class="bar-fill" id="hydration-bar"></div></div>
+            <span id="hydration-value">--</span>
+          </div>
+          <div class="status-bar">
+            <label>Alertness</label>
+            <div class="bar"><div class="bar-fill" id="alertness-bar"></div></div>
+            <span id="alertness-value">--</span>
+          </div>
+          <div class="status-bar">
+            <label>Tiredness</label>
+            <div class="bar"><div class="bar-fill" id="tiredness-bar"></div></div>
+            <span id="tiredness-value">--</span>
+          </div>
+        </div>
+
+        <div id="inventory-display" class="inventory">
+          <h4>Inventory</h4>
+          <div id="inventory-items"></div>
+        </div>
+      </section>
+
+      <!-- Activity Log -->
+      <section class="activity-log">
+        <h3>Activity</h3>
+        <div id="log-messages" class="log-container"></div>
+      </section>
+
+      <!-- Action Input -->
+      <section class="action-input">
+        <form id="action-form">
+          <input
+            type="text"
+            id="action-text"
+            placeholder="What do you do? (e.g., 'look around', 'move north', 'say hello')"
+            autocomplete="off"
+            required
+          >
+          <button type="submit" class="btn-primary">Act</button>
+        </form>
+
+        <div class="quick-actions">
+          <button class="btn-quick" data-action="look">Look</button>
+          <button class="btn-quick" data-action="wait">Wait</button>
+          <button class="btn-quick" data-action="inventory">Inventory</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Connection Status -->
+    <div id="connection-status" class="connection-indicator">
+      <span class="status-dot"></span>
+      <span id="status-text">Connecting...</span>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="/js/mcp-client.js"></script>
+  <script src="/js/game.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
