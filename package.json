@@ -1,0 +1,30 @@
+{
+  "name": "storysplicer",
+  "version": "0.1.0",
+  "description": "World simulation system for developing stories and interactive role-playing experiences",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test src/**/*.test.js",
+    "migrate": "node src/db/migrate.js",
+    "migrate:rollback": "node src/db/migrate.js rollback"
+  },
+  "keywords": [
+    "storytelling",
+    "simulation",
+    "ai",
+    "mcp",
+    "rpg"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
