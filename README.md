@@ -28,7 +28,14 @@ StorySplicer creates dynamic, AI-driven worlds where:
 - CRUD models for all entities
 - Unit tests for database layer
 
-🚧 **Next Phase**: MCP Server Core (Phase 2)
+✅ **Phase 2 Complete**: MCP Server Core
+- MCP server with stdio and WebSocket transports
+- Complete tool set for world/area/character/item operations
+- Area trigger system with multiple reaction types
+- Player authentication and session management
+- Integration tests for all MCP tools
+
+🚧 **Next Phase**: Character Agent Controller (Phase 3)
 
 See [DEVELOPMENT-ROADMAP.md](./DEVELOPMENT-ROADMAP.md) for full implementation plan.
 
@@ -108,6 +115,7 @@ storysplicer/
 
 - `npm start` - Start the application
 - `npm run dev` - Start with auto-reload on file changes
+- `npm run mcp` - Start MCP server (WebSocket mode)
 - `npm test` - Run unit tests
 - `npm run migrate` - Run pending database migrations
 - `npm run migrate down` - Rollback last migration
@@ -126,6 +134,7 @@ Environment variables (see `.env.example`):
 ## Documentation
 
 - [Database Schema](./DATABASE.md) - Complete database documentation
+- [MCP API](./MCP-API.md) - MCP server tools and usage
 - [Development Roadmap](./DEVELOPMENT-ROADMAP.md) - Implementation phases
 - [Design Document](./storysplicer-design.md) - System architecture and concepts
 - [CLAUDE.md](./CLAUDE.md) - Project guidance for AI assistants
@@ -162,13 +171,13 @@ Environment variables (see `.env.example`):
 ## Development Phases
 
 1. ✅ **Foundation & Database Layer** - Complete
-2. 🚧 **MCP Server Core** - Next
-3. **Character Agent Controller**
+2. ✅ **MCP Server Core** - Complete
+3. 🚧 **Character Agent Controller** - Next
 4. **Basic Frontend (PWA)**
 5. **Narrator Agent**
 6. **Physical Simulation & Realism**
 7. **Series Management System**
-8. **Area Trigger System**
+8. **Area Trigger System** - Partially complete (basic system in Phase 2)
 9. **Advanced Features**
 10. **Testing & Polish**
 
