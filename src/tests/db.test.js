@@ -63,7 +63,7 @@ test('Area CRUD operations', async () => {
   });
   assert.ok(area.id);
   assert.strictEqual(area.name, 'Test Area');
-  assert.strictEqual(area.temperature, '22.5');
+  assert.strictEqual(parseFloat(area.temperature), 22.5);
 
   // Read
   const foundArea = await Area.findById(area.id);
@@ -73,7 +73,7 @@ test('Area CRUD operations', async () => {
   const updatedArea = await Area.update(area.id, {
     temperature: 25.0
   });
-  assert.strictEqual(updatedArea.temperature, '25');
+  assert.strictEqual(parseFloat(updatedArea.temperature), 25);
 
   // Cleanup
   await Area.delete(area.id);
@@ -109,7 +109,7 @@ test('Character CRUD operations', async () => {
   assert.ok(character.id);
   assert.strictEqual(character.name, 'Test Character');
   assert.strictEqual(character.species, 'human');
-  assert.strictEqual(character.nutrition, '100');
+  assert.strictEqual(parseFloat(character.nutrition), 100);
 
   // Test finding awake characters
   const awakeCharacters = await Character.findAwake(world.id);

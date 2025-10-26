@@ -135,8 +135,8 @@ test('Character tools', async (t) => {
     assert.ok(result.content[0].text.includes('Updated'));
 
     const character = await Character.findById(characterId);
-    assert.strictEqual(character.nutrition, '80');
-    assert.strictEqual(character.tiredness, '25');
+    assert.strictEqual(parseFloat(character.nutrition), 80);
+    assert.strictEqual(parseFloat(character.tiredness), 25);
   });
 
   await t.test('character_add_memory', async () => {
