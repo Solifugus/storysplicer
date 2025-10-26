@@ -35,7 +35,16 @@ StorySplicer creates dynamic, AI-driven worlds where:
 - Player authentication and session management
 - Integration tests for all MCP tools
 
-🚧 **Next Phase**: Character Agent Controller (Phase 3)
+✅ **Phase 3 Complete**: Character Agent Controller
+- Cycle-based simulation with configurable interval
+- LLM integration (Llama-3.2-3B for minor, Qwen2-7B for story characters)
+- Character context window builder with full state
+- Action parser and executor
+- Sleep/wake cycle with physical state management
+- Memory management with automatic summarization
+- Performance monitoring and statistics
+
+🚧 **Next Phase**: Basic Frontend PWA (Phase 4)
 
 See [DEVELOPMENT-ROADMAP.md](./DEVELOPMENT-ROADMAP.md) for full implementation plan.
 
@@ -116,6 +125,7 @@ storysplicer/
 - `npm start` - Start the application
 - `npm run dev` - Start with auto-reload on file changes
 - `npm run mcp` - Start MCP server (WebSocket mode)
+- `npm run agent` - Start agent controller (requires models)
 - `npm test` - Run unit tests
 - `npm run migrate` - Run pending database migrations
 - `npm run migrate down` - Rollback last migration
@@ -135,6 +145,7 @@ Environment variables (see `.env.example`):
 
 - [Database Schema](./DATABASE.md) - Complete database documentation
 - [MCP API](./MCP-API.md) - MCP server tools and usage
+- [Model Setup](./MODELS.md) - LLM model installation guide
 - [Development Roadmap](./DEVELOPMENT-ROADMAP.md) - Implementation phases
 - [Design Document](./storysplicer-design.md) - System architecture and concepts
 - [CLAUDE.md](./CLAUDE.md) - Project guidance for AI assistants

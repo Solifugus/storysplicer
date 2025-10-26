@@ -43,8 +43,9 @@ tmp/
 temp/
 *.tmp
 
-# LLM model cache
-models/cache/
+# LLM models
+models/
+*.gguf
 *.gguf.tmp
 
 # User data (for development)
