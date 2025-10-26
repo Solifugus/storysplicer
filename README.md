@@ -44,7 +44,17 @@ StorySplicer creates dynamic, AI-driven worlds where:
 - Memory management with automatic summarization
 - Performance monitoring and statistics
 
-🚧 **Next Phase**: Basic Frontend PWA (Phase 4)
+✅ **Phase 4 Complete**: Basic Frontend (PWA)
+- Progressive Web App with offline capability
+- Mobile-first responsive design
+- WebSocket MCP client with real-time updates
+- Player authentication and session management
+- Area visualization with description and status
+- Character status monitoring (nutrition, hydration, tiredness, alertness)
+- Command parsing system for natural language input
+- Activity log with scrolling event feed
+
+🚧 **Next Phase**: Narrator Agent (Phase 5)
 
 See [DEVELOPMENT-ROADMAP.md](./DEVELOPMENT-ROADMAP.md) for full implementation plan.
 
@@ -126,9 +136,10 @@ storysplicer/
 - `npm run dev` - Start with auto-reload on file changes
 - `npm run mcp` - Start MCP server (WebSocket mode)
 - `npm run agent` - Start agent controller (requires models)
+- `npm run web` - Start web server for PWA (http://localhost:8080)
 - `npm test` - Run unit tests
 - `npm run migrate` - Run pending database migrations
-- `npm run migrate down` - Rollback last migration
+- `npm run migrate:rollback` - Rollback last migration
 
 ## Configuration
 
@@ -146,6 +157,7 @@ Environment variables (see `.env.example`):
 - [Database Schema](./DATABASE.md) - Complete database documentation
 - [MCP API](./MCP-API.md) - MCP server tools and usage
 - [Model Setup](./MODELS.md) - LLM model installation guide
+- [Frontend Guide](./FRONTEND.md) - PWA interface and player commands
 - [Development Roadmap](./DEVELOPMENT-ROADMAP.md) - Implementation phases
 - [Design Document](./storysplicer-design.md) - System architecture and concepts
 - [CLAUDE.md](./CLAUDE.md) - Project guidance for AI assistants
@@ -184,8 +196,8 @@ Environment variables (see `.env.example`):
 1. ✅ **Foundation & Database Layer** - Complete
 2. ✅ **MCP Server Core** - Complete
 3. ✅ **Character Agent Controller** - Complete
-4. 🚧 **Basic Frontend (PWA)** - Next
-5. **Narrator Agent**
+4. ✅ **Basic Frontend (PWA)** - Complete
+5. 🚧 **Narrator Agent** - Next
 6. **Physical Simulation & Realism**
 7. **Series Management System**
 8. **Area Trigger System** - Partially complete (basic system in Phase 2)
