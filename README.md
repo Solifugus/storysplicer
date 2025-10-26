@@ -183,8 +183,8 @@ Environment variables (see `.env.example`):
 
 1. ✅ **Foundation & Database Layer** - Complete
 2. ✅ **MCP Server Core** - Complete
-3. 🚧 **Character Agent Controller** - Next
-4. **Basic Frontend (PWA)**
+3. ✅ **Character Agent Controller** - Complete
+4. 🚧 **Basic Frontend (PWA)** - Next
 5. **Narrator Agent**
 6. **Physical Simulation & Realism**
 7. **Series Management System**
